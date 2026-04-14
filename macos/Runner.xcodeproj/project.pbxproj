@@ -28,6 +28,9 @@
 		33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F22044A3C60003C045 /* Assets.xcassets */; };
 		33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F42044A3C60003C045 /* MainMenu.xib */; };
 		33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC11122044BFA00003C045 /* MainFlutterWindow.swift */; };
+		C758303F2F8E411A003D1074 /* libmeesign_crypto.dylib in Resources */ = {isa = PBXBuildFile; fileRef = C758303B2F8E3F36003D1074 /* libmeesign_crypto.dylib */; };
+		C75830412F8E4185003D1074 /* libmeesign_crypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C758303B2F8E3F36003D1074 /* libmeesign_crypto.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C75830422F8E4185003D1074 /* libmeesign_crypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = C758303B2F8E3F36003D1074 /* libmeesign_crypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E962A50307145C2C1A9195F3 /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E0B58E8A3AFE53762B4623 /* Pods_RunnerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,14 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		33CC110E2044A8840003C045 /* Bundle Framework */ = {
+		C75830432F8E4185003D1074 /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C75830422F8E4185003D1074 /* libmeesign_crypto.dylib in Embed Libraries */,
 			);
-			name = "Bundle Framework";
+			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -86,6 +90,7 @@
 		80E0B58E8A3AFE53762B4623 /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		853388514F566360C1F56446 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		C758303B2F8E3F36003D1074 /* libmeesign_crypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmeesign_crypto.dylib; path = "../meesign_native/native/meesign-crypto/target/aarch64-apple-darwin/release/libmeesign_crypto.dylib"; sourceTree = "<group>"; };
 		D74539438A32D6809BCC528C /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F071249FD9742DAD9A708C9D /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75830412F8E4185003D1074 /* libmeesign_crypto.dylib in Frameworks */,
 				1A033EA83C7C5661382C6534 /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,13 +201,13 @@
 				2B0D58917B816ECF0A225D2D /* Pods-RunnerTests.release.xcconfig */,
 				F071249FD9742DAD9A708C9D /* Pods-RunnerTests.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		D73912EC22F37F3D000D13A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C758303B2F8E3F36003D1074 /* libmeesign_crypto.dylib */,
 				D74539438A32D6809BCC528C /* Pods_Runner.framework */,
 				80E0B58E8A3AFE53762B4623 /* Pods_RunnerTests.framework */,
 			);
@@ -236,9 +242,9 @@
 			buildPhases = (
 				BF4C4088D3A36727FBF0A949 /* [CP] Check Pods Manifest.lock */,
 				33CC10E92044A3C60003C045 /* Sources */,
-				33CC10EA2044A3C60003C045 /* Frameworks */,
 				33CC10EB2044A3C60003C045 /* Resources */,
-				33CC110E2044A8840003C045 /* Bundle Framework */,
+				C75830432F8E4185003D1074 /* Embed Libraries */,
+				33CC10EA2044A3C60003C045 /* Frameworks */,
 				3399D490228B24CF009A79C7 /* ShellScript */,
 				9B12A3502D5F7AA48565FDCA /* [CP] Embed Pods Frameworks */,
 			);
@@ -317,6 +323,7 @@
 			files = (
 				33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */,
 				33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */,
+				C758303F2F8E411A003D1074 /* libmeesign_crypto.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +586,14 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
+					/usr/lib/swift,
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)/",
+					"$(SDKROOT)/usr/lib/swift",
+					"$(PROJECT_DIR)/../meesign_native/native/meesign-crypto/target/aarch64-apple-darwin/release/",
+				);
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
@@ -711,6 +726,14 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
+					/usr/lib/swift,
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)/",
+					"$(SDKROOT)/usr/lib/swift",
+					"$(PROJECT_DIR)/../meesign_native/native/meesign-crypto/target/aarch64-apple-darwin/release/",
+				);
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -730,6 +753,14 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
+					/usr/lib/swift,
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)/",
+					"$(SDKROOT)/usr/lib/swift",
+					"$(PROJECT_DIR)/../meesign_native/native/meesign-crypto/target/aarch64-apple-darwin/release/",
 				);
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
